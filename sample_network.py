@@ -16,6 +16,8 @@ training_inputs = np.array([
 	[0,0,1],
 	]);
 
+testing_inputs = np.array([[1,0,0]])
+
 labeled_outputs =  np.array([[0,1,1,0]]).T
 
 np.random.seed(1)
@@ -55,3 +57,9 @@ print(weights)
 
 print('outputs after training')
 print(actual_outputs)
+
+print('testing the network')
+
+test_output = 	sigmoid(np.dot(testing_inputs,weights))
+
+print(test_output)
